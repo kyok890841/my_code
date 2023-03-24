@@ -113,16 +113,6 @@ class PowerConsumption():
                     data['SYS'][node_type] += watt
                 else:
                     data[rack_num]['ipmi_miss'] += f" {node_name}"
-                # for idx, line in enumerate(read):
-                    
-                #     if line.split()[2] == data[rack_num]['time']:
-                #         if len(line.split()) > 3:
-                #             data[rack_num][node_type] += int(line.split()[3])
-                #             data[f'BD{bd_num}'][node_type] += int(line.split()[3])
-                #             data['SYS'][node_type] += int(line.split()[3])
-                #         else:
-                #             data[rack_num]['ipmi_miss'] += f" {node_name}"
-                #         #data[rack_num]['ipmi_miss'] += f" {node_name}"
             for key, val in data[rack_num].items():
                      if val == 0:
                         data[rack_num][key] = 'NA'
