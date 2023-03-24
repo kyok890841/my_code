@@ -113,6 +113,7 @@ class PowerConsumption():
                     data['SYS'][node_type] += watt
                 else:
                     data[rack_num]['ipmi_miss'] += f" {node_name}"
+
             for key, val in data[rack_num].items():
                      if val == 0:
                         data[rack_num][key] = 'NA'
